@@ -6,19 +6,19 @@
         {
             Console.WriteLine("Hello, World!");
 
-            Console.Write("number2?   ");
+            Console.Write("number1?   ");
             string strnumber1 = Console.ReadLine();
             int number1 = int.Parse(strnumber1);
+            int s = 0;
 
-            Console.Write("number2?   ");
-            string strnumber2 = Console.ReadLine();
-            int number2 = int.Parse(strnumber2);
+            while (number1 > 0)
+            {
+                int c = number1 % 10;
+                s = s + c;
+                number1 = number1 / 10;
+            }
+            Console.WriteLine(s);
 
-            int c;
-            c = number1 + number2;
-
-            Console.WriteLine(c);
-
-        }   
+        }
     }
 }
